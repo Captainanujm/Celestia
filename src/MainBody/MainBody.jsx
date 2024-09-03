@@ -16,10 +16,19 @@ function MainBody(){
             <h1 className="assist-message">How can i assist you?</h1>
         </div>
         <div className="card-area">
-        <Card para="Suggest beautiful places to see on upcoming road trip" img={assets.compass_icon}/>
-        <Card para="Briefly summarize this concept: Urban planning..." img={assets.compass_icon}/>
-        <Card para="Brainstorm team bonding activites for our work retreat" img={assets.compass_icon}/>
-        <Card para="Improve the readability of following code" img={assets.compass_icon}/>
+        <Card para="Suggest beautiful places to see on upcoming road trip..." img={assets.compass_icon}/>
+        <Card para="Briefly summarize this concept: Urban planning..." img={assets.bulb_icon}/>
+        <Card para="Brainstorm team bonding activites for our work retreat..." img={assets.message_icon}/>
+        <Card para="Improve the readability of following code..." img={assets.code_icon}/>
+        </div>
+        <div className="input">
+            <input type="text" placeholder="Enter your prompt here"/>
+            <div className="icons">
+            <img src={assets.gallery_icon} alt="gallery-icon"/>
+            <img src={assets.mic_icon} alt="mic-icon"/>
+            <img src={assets.send_icon} alt="send-icon"/>
+            </div>
+
         </div>
         </div>
     </div>)
