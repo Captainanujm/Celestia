@@ -16,9 +16,10 @@ function MainBody(){
             <h1 className="assist-message">How can i assist you?</h1>
         </div>
         <div className="card-area">
-        <Card para="helllo there how are you are you fine dear" img={assets.compass_icon}/>
-        <Card para="helllo there how are you are you fine dear" img={assets.compass_icon}/>
-        <Card para="helllo there how are you are you fine dear" img={assets.compass_icon}/>
+        <Card para="Suggest beautiful places to see on upcoming road trip" img={assets.compass_icon}/>
+        <Card para="Briefly summarize this concept: Urban planning..." img={assets.compass_icon}/>
+        <Card para="Brainstorm team bonding activites for our work retreat" img={assets.compass_icon}/>
+        <Card para="Improve the readability of following code" img={assets.compass_icon}/>
         </div>
         </div>
     </div>)

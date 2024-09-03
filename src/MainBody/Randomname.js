@@ -8,5 +8,6 @@ const random=["Ace!",
     "Virtuoso!",
     "Champion!",
     "Superman!",
+    "Genius!",
 ]
 export default random;
