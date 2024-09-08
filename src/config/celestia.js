@@ -26,6 +26,8 @@ import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/ge
   
     const result = await chatSession.sendMessage(prompt);
     console.log(result.response.text());
+    const resultshow=result.response.text();
+    return resultshow;
   }
   
   export default run;

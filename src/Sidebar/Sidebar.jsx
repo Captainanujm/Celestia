@@ -1,8 +1,14 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
+import { Context } from "../context/Context.jsx";
 import "./Sidebar.css"
 import assets from "../assets/assets.js";
 function Sidebar(){
-    const [extend,setextend]=useState(false);
+    const [extend,setextend]=useState(true);
+    const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult}=useContext(Context);
+    function handlenewchat(){
+        setShowResult(false);
+        setInput("");
+    }
     function handleClick(){
        setextend(prevExtend=>{
         return !prevExtend;
@@ -14,7 +20,7 @@ function Sidebar(){
         <img onClick={handleClick}className="menu-img" src={assets.menu_icon} alt="menu-icon"/>
         </div>
         {extend==true?<div>
-        <button className="newchat"><img className="plus-img" src={assets.plus_icon} alt="plus-icon"/><p>New chat</p></button>
+        <button onClick={handlenewchat}className="newchat"><img className="plus-img" src={assets.plus_icon} alt="plus-icon"/><p>New chat</p></button>
         <p className="recent">Recent</p>
         </div>:null}
         

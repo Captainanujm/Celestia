@@ -8,16 +8,19 @@
     display:flex;
     justify-content: space-between;
     padding:20px 50px;
+    margin-bottom: 70px;
 }
 .greet-grandparent{
-    margin:0px;
+    margin-left:50px;
     display:flex;
     gap:70px;
     flex-direction: column;
     padding:20px 150px;
    justify-content: center;
-    width:100%;
-    height:100%;
+    width:fit-content;
+    height:fit-content;
+    /* background-color: #ff5546; */
+    overflow-y: auto;
 }
 .greet-parent{
     width:fit-content;
@@ -51,7 +54,8 @@
     width:40px;
 }
 .input{ 
-    position: relative;
+    position: fixed;
+    top:650px;
     margin-top: 50px;
     width: 800px;
 
@@ -80,4 +84,11 @@
     transform: translateY(-50%);
     display: flex;
     gap: 12px;
+}
+.get-Result{
+    max-height:500px;
+    font-size: 20px;
+    width:fit-content;
+    background-color: aquamarine;
+    overflow-y:scroll;
 }
