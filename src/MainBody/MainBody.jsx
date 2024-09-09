@@ -8,6 +8,14 @@ import { Context } from "../context/Context.jsx";
 
 
 function MainBody(){
+    const mystyle={
+        margin:"0px 60px",
+        padding:"0px 70px 0px 0px",
+        color:"white",
+    }
+    const navStyle={
+        marginBottom:"40px",
+    }
     const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult}=useContext(Context);
     const [name,setName]=useState(random[Math.floor(Math.random()*random.length)])
     function handleSend(event){
@@ -16,11 +24,11 @@ function MainBody(){
         onSent(input);
     }
     return(<div className="mainbody">
-        <div className="nav">
+        <div style={showResult==true?navStyle:null} className="nav">
             <h3 className="celestia">Celestia</h3>
             <img className="user-icon" src={assets.user_icon} alt="user"/>
         </div>
-        <div className="greet-grandparent">
+        <div style={showResult==true?mystyle:null} className="greet-grandparent">
         {showResult==false?<div className="greet-parent">
             <h1 className="message"><span>Hey,{name}</span></h1>
             <h1 className="assist-message">How can i assist you?</h1>
