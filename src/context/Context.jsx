@@ -6,6 +6,7 @@ const ContextProvider=(props)=>{
     const[input,setInput]=useState("");
     const[showResult,setShowResult]=useState(false);
     const [getResult, setGetResult] = useState("");
+    const [history,sethistory]=useState([]);
     async function onSent(prompt){
        setGetResult(await run(input));
     }
@@ -18,6 +19,8 @@ const ContextProvider=(props)=>{
         setShowResult,
         getResult,
         setGetResult,
+        history,
+        sethistory,
     }
 
     return (

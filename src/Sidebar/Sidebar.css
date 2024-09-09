@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     min-height:100vh;
-    min-width:fit-content;
+    max-width:250px;
+    /* min-width: fit-content; */
     background-color: #f0f4ff;
     padding:25px 15px;
 }
@@ -37,7 +38,7 @@
     cursor:pointer;
 }
 .recent{
-    margin:30px 0px;
+    margin:20px 0px;
 }
 .help,.activity,.settings{
     padding:10px 25px;
@@ -49,12 +50,21 @@
     cursor:pointer;
 }
 .recent-chat{
-    padding:5px 10px;
-    border-radius:50px;
-    /* margin:0px 10px 0px 0px; */
-    display:flex;
+    display: flex;
+    flex-direction: column;
     gap:10px;
-    cursor:pointer;
+   max-height:400px;
+   max-width: 200px;
+   overflow-y: scroll;
+
+}
+.get-chat{
+    display:flex;
+    min-height: 30px;
+    max-width: 200px;
+    overflow-x: hidden;
+    background-color: #e2e6eb;
+
 }
 .recent-chat:hover,.help:hover,.activity:hover,.settings:hover{
     background-color: #e2e6eb;

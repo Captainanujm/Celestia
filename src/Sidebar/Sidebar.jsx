@@ -3,8 +3,8 @@ import { Context } from "../context/Context.jsx";
 import "./Sidebar.css"
 import assets from "../assets/assets.js";
 function Sidebar(){
-    const [extend,setextend]=useState(true);
-    const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult}=useContext(Context);
+        const [extend,setextend]=useState(true);
+    const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult,history,sethistory}=useContext(Context);
     function handlenewchat(){
         setShowResult(false);
         setInput("");
@@ -25,8 +25,10 @@ function Sidebar(){
         </div>:null}
         
         {extend==true?<div className="recent-chat">
-            <img className="message-img" src={assets.message_icon} alt="message-icon"/>
-            <p>What is react...</p></div>:null}
+            {/* <img className="message-img" src={assets.message_icon} alt="message-icon"/>
+            <div>hello</div> */}
+            {history}
+           </div>:null}
         </div>
        {extend==true?<div className="lowercomponent">
         <div className="help">

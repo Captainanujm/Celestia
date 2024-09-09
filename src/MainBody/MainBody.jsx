@@ -4,9 +4,6 @@ import "./MainBody.css";
 import random from "./Randomname.js"
 import Card from "../Card/Card.jsx";
 import { Context } from "../context/Context.jsx";
-
-
-
 function MainBody(){
     const mystyle={
         margin:"0px 60px",
@@ -16,13 +13,21 @@ function MainBody(){
     const navStyle={
         marginBottom:"40px",
     }
-    const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult}=useContext(Context);
-    const [name,setName]=useState(random[Math.floor(Math.random()*random.length)])
+    const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult,history,sethistory}=useContext(Context);
+    const [name,setName]=useState(random[Math.floor(Math.random()*random.length)]);
     function handleSend(event){
-        setShowResult(true);
         event.preventDefault();
+        setShowResult(true);
         onSent(input);
+        const newElement=(<div className="get-chat">
+            <img className="message-img" src={assets.message_icon} alt="message-icon"/>
+            <div>{input}</div>
+           </div>);
+        sethistory(prevInput=>{
+            return [...prevInput,newElement];
+        })
     }
+
     return(<div className="mainbody">
         <div style={showResult==true?navStyle:null} className="nav">
             <h3 className="celestia">Celestia</h3>
