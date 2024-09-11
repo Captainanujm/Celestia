@@ -53,24 +53,26 @@
     width:40px;
 }
 .input{ 
+    border:2px solid black;
     position: fixed;
+    border-radius: 50px;
     top:650px;
     left:400px;
     margin-top: 50px;
     width: 800px;
-
-
 }
 .input input{
+    border:none;
+    outline:none;
     font-size: 15px;
-    width: 100%;
+    width: 82%;
     height: 60px;
     padding: 20px;
-    padding-right: 100px;
     border-radius: 50px;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+    overflow: hidden;
 }
+
 .input img{
     height: 35px;
     width: 35px;
@@ -86,10 +88,13 @@
     gap: 12px;
 }
 .get-Result{
-    color:white;
+    color:rgb(0, 0, 0);
     max-height:550px;
     font-size: 20px;
     width:fit-content;
-    background-color: rgb(13, 15, 14);
     overflow-y:scroll;
 }
+.get-Result::-webkit-scrollbar{
+    display:none;
+}
+

@@ -15,13 +15,17 @@ function MainBody(){
     }
     const {onSent,input,setInput,showResult,setShowResult,getResult,setGetResult,history,sethistory}=useContext(Context);
     const [name,setName]=useState(random[Math.floor(Math.random()*random.length)]);
+    function handle_recent_click(event){
+        onSent(event.target.value);
+        setInput("");
+    }
     function handleSend(event){
         event.preventDefault();
         setShowResult(true);
         onSent(input);
         const newElement=(<div className="get-chat">
             <img className="message-img" src={assets.message_icon} alt="message-icon"/>
-            <div>{input}</div>
+            <div onClick={handle_recent_click}>{input}</div>
            </div>);
         sethistory(prevInput=>{
             return [...prevInput,newElement];
@@ -48,7 +52,7 @@ function MainBody(){
             <p> {getResult} </p>
         </div>:null}
         <div className="input">
-            <input type="text" onChange={(e)=>{setInput(e.target.value)}} value={input} placeholder="Enter your prompt here"/>
+            <input id="my-input" type="text" onChange={(e)=>{setInput(e.target.value)}} value={input} placeholder="Enter your prompt here"/>
             <div className="icons">
             <img src={assets.gallery_icon} alt="gallery-icon"/>
             <img src={assets.mic_icon} alt="mic-icon"/>

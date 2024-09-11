@@ -52,18 +52,23 @@
 .recent-chat{
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:20px;
    max-height:400px;
    max-width: 200px;
    overflow-y: scroll;
-
+}
+.recent-chat::-webkit-scrollbar{
+    display:none;
 }
 .get-chat{
-    display:flex;
-    min-height: 30px;
-    max-width: 200px;
-    overflow-x: hidden;
+    padding:2px;
+    display: flex;
+    min-height: 29px;
+    max-height:29px;
+   min-width:200px ;
     background-color: #e2e6eb;
+    overflow: hidden;
+    cursor: pointer;
 
 }
 .recent-chat:hover,.help:hover,.activity:hover,.settings:hover{
